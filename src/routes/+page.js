@@ -11,7 +11,7 @@ const client = sanityClient({
 
 /** @type {import('./$types').PageLoad} */
 export const load = async () => {
-    const recipes = await client.fetch(`*[_type == "recipe"]{
+    const recipes = await client.fetch(`*[_type == "recipe"][]{
         _id,
           title,
           slug,
@@ -24,8 +24,18 @@ export const load = async () => {
           category
       }`);
 
-      if(recipes){
-        return {recipes}
+      const categories = await client.fetch(`*[_type == "category"][0...4]{
+        _id, 
+        name,
+        "imageUrl": image.asset->url,
+        summary
+      }`)
+
+      if(recipes && categories){
+        return {
+          "recipes": recipes, 
+          "categories": categories
+        }
       }
 
      error(500, "Internal server error")
