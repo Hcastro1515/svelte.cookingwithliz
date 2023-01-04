@@ -1,12 +1,5 @@
-import sanityClient from "@sanity/client";
+import client from "../sanityClient";
 import { error } from "@sveltejs/kit";
-
-const client = sanityClient({
-    projectId: "nrx0t8ko",
-    dataset: "production",
-    useCdn: true,
-    apiVersion: "2021-10-21",
-})
 
 
 /** @type {import('./$types').PageLoad} */
