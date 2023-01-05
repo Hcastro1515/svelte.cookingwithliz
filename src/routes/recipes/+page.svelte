@@ -13,8 +13,6 @@
 	$: filteredRecipes = recipes.filter((/** @type {{ category: string | string[]; }} */ recipe) => {
 		return recipe.category.includes(selected);
 	});
-
-	$: console.log(filteredRecipes);
 </script>
 
 <div>
@@ -28,7 +26,7 @@
 	<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
 		{#if filteredRecipes.length > 0}
 			{#each filteredRecipes as recipe}
-				<a href="/recipe/{recipe._id}" in:fade={{ easing: cubicIn, duration: 500 }}>
+				<a href="/recipes/{recipe._id}" in:fade={{ easing: cubicIn, duration: 500 }}>
 					<div
 						class="bg-white flex flex-col mb-8 md:mb-0 cursor-pointer transform transition ease-in-out duration-300 hover:scale-105"
 					>

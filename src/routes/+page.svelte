@@ -7,16 +7,15 @@
 	import '@splidejs/svelte-splide/css';
 	/** @type {import('./$types').PageData} */
 	export let data;
-	console.log(data);
 </script>
 
-<section class="space-y-6 flex flex-col md:flex-row mt-6 justify-center mb-24">
-	<div class="flex-1 space-y-6 max-w-md md:mr-14 md:flex md:justify-center md:flex-col">
-		<h1 class="text-4xl text-black md:text-5xl">
+<section class="flex justify-center items-center flex-col md:flex-row space-y-10 mt-4 mb-24">
+	<div class=" space-y-6 sm:max-w-md lg:max-w-xl md:mr-14">
+		<h1 class="text-2xl font-semibold text-black md:text-3xl lg:text-4xl xl:text-5xl xl:max-w-xl">
 			Te Enseno A Lograr Las Recetas Caseras Mas Deliciosas
 		</h1>
 		<div class="h-0.5 w-full bg-gray-600 rounded-md" />
-		<p class="text-sm opacity-75">
+		<p class="text-xs opacity-75">
 			Hola mi nombre es Lizbeth Gonzalez, hoy te invito a probar mis deliciosas recetas. Tambien te
 			comparto mi libro para que tengas un look especial de mi vida y mi amor por la comida.
 		</p>
@@ -31,14 +30,14 @@
 			>
 		</div>
 	</div>
-	<div class="flex-1 grid place-items-center max-w-sm md:ml-14">
+	<div class="sm:max-w-md md:max-w-md md:ml-14">
 		<Splide
 			options={{ rewind: true, width: 600 }}
 			hasTrack={false}
 			aria-label="Highligted Recipes"
 			class="w-full h-full"
 		>
-			<SplideTrack>
+			<SplideTrack class="rounded-md">
 				{#each data.recipes as recipe}
 					<SplideSlide>
 						<img
@@ -54,8 +53,8 @@
 </section>
 
 <section class="my-20">
-	<div class="flex justify-between items-center w-full mb-6">
-		<h3 class=" font-extrabold tracking-wider">Recetas por categoria</h3>
+	<div class="flex justify-between items-center w-full mb-10">
+		<h3 class=" font-extrabold tracking-wider lg:text-2xl">Recetas por categoria</h3>
 		<a href="/recipes">
 			<button
 				class="py-1 px-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in"
@@ -64,7 +63,7 @@
 		>
 	</div>
 
-	<div class="md:flex md:justify-center md:items-center justify-center w-full cursor-pointer">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 cursor-pointer">
 		{#each data.categories as category}
 			<div class="mt-8 flex flex-col items-center justify-center p-4 space-x-8">
 				<div>
@@ -87,21 +86,23 @@
 </section>
 
 <section class="my-28 space-y-6">
-	<div class="flex justify-between items-center w-full">
-		<h3 class=" font-extrabold tracking-wider">Mis Highlights</h3>
-		<button
-			class="py-1 px-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in "
-			>Ver Mas</button
-		>
+	<div class="flex justify-between items-center w-full mb-10">
+		<h3 class=" font-extrabold tracking-wider lg:text-2xl">Mis Highlights</h3>
+		<a href="/recipes">
+			<button
+				class="py-1 px-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in "
+				>Ver Mas</button
+			>
+		</a>
 	</div>
-	<div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+	<div class="container grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-8">
 		{#each data.recipes as recipe}
 			<a href="/recipes">
 				<div
 					class="bg-white flex flex-col mb-8 md:mb-0 cursor-pointer transform transition ease-in-out duration-300 hover:scale-105"
 				>
 					<div class="max-w-md">
-						<img src={recipe.imageUrl} alt={recipe.title} class="w-full h-56 object-cover" />
+						<img src={recipe.imageUrl} alt={recipe.title} class="w-full h-64 object-cover" />
 					</div>
 					<div class="flex-1 px-6 py-2">
 						<div class="h-1 rounded-md bg-black w-1/3 self-start my-4" />
