@@ -20,12 +20,15 @@
 			comparto mi libro para que tengas un look especial de mi vida y mi amor por la comida.
 		</p>
 		<div Class="space-x-1">
-			<button
-				class="py-2 px-3 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in "
-				>Descubre Rectetas</button
+			<a href="/recipes">
+				<button
+					class="py-2 px-3 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in "
+					>Descubre Rectetas</button
+				></a
 			>
 			<button
-				class="py-2 px-3 bg-black text-white rounded-md hover:bg-gray-900 transition-all ease-in"
+				disabled
+				class="py-2 px-3 bg-gray-900 text-white rounded-md hover:bg-gray-900 transition-all ease-in"
 				>EBOOK</button
 			>
 		</div>
@@ -88,16 +91,10 @@
 <section class="my-28 space-y-6">
 	<div class="flex justify-between items-center w-full mb-10">
 		<h3 class=" font-extrabold tracking-wider lg:text-2xl">Mis Highlights</h3>
-		<a href="/recipes">
-			<button
-				class="py-1 px-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all ease-in "
-				>Ver Mas</button
-			>
-		</a>
 	</div>
 	<div class="container grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-8">
 		{#each data.recipes as recipe}
-			<a href="/recipes">
+			<a href="/recipes/{recipe._id}">
 				<div
 					class="bg-white flex flex-col mb-8 md:mb-0 cursor-pointer transform transition ease-in-out duration-300 hover:scale-105"
 				>

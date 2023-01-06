@@ -14,35 +14,35 @@
 	let menu = [
 		{
 			menuItemName: 'Panes',
-			url: '/recetas?filterBy=panes'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Postres',
-			url: '/recetas?filterBy=postres'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Desayunos',
-			url: '/recetas?filterBy=desayunos'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Aperitivos',
-			url: '/recetas?filterBy=aperitivos'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Platos Fuertes',
-			url: '/recetas?filterBy=platosFuertes'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Bebidas',
-			url: '/recetas?filterBy=bebidas'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Ensaladas',
-			url: '/recetas?filterBy=ensaladas'
+			url: '/recipes'
 		},
 		{
 			menuItemName: 'Salsas',
-			url: '/recetas?filterBy=salsass'
+			url: '/recipes'
 		}
 	];
 </script>
@@ -63,12 +63,12 @@
 
 			{#if isRecetasMenuOpen}
 				<div
-					class="flex justify-center items-center flex-col space-y-4 absolute top-16 bg-orange-50 z-10 w-full"
+					class="flex justify-center items-center flex-col space-y-4 absolute top-16 bg-orange-50 z-10 w-40 p-6"
 					in:slide
 					out:slide
 				>
 					{#each menu as item}
-						<a href={`/${item.url}`}>{item.menuItemName}</a>
+						<a href={`${item.url}`}>{item.menuItemName}</a>
 					{/each}
 				</div>
 			{/if}
@@ -100,7 +100,7 @@
 			{#if isRecetasMenuOpen}
 				<div class="flex justify-center items-center flex-col space-y-4" in:slide out:slide>
 					{#each menu as item}
-						<a href={`/${item.url}`}>{item.menuItemName}</a>
+						<a href={`${item.url}`}>{item.menuItemName}</a>
 					{/each}
 				</div>
 			{/if}

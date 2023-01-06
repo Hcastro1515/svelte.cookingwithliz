@@ -12,6 +12,7 @@ export const load = async ({params}) => {
           slideshowImages,
           cookingTime,
           peopleServe,
+          preparationTime,
           category
       }`);
 

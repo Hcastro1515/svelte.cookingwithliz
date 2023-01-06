@@ -4,7 +4,7 @@ import { error } from "@sveltejs/kit";
 
 /** @type {import('./$types').PageLoad} */
 export const load = async () => {
-    const recipes = await client.fetch(`*[_type == "recipe"][]{
+    const recipes = await client.fetch(`*[_type == "recipe"][0...3]{
         _id,
           title,
           slug,
