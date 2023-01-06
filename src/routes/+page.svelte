@@ -11,6 +11,8 @@
 
 <svelte:head>
 	<title>Cooking With Liz</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9306994878118987"
+     crossorigin="anonymous"></script>
 </svelte:head>
 
 <section class="flex justify-center items-center flex-col md:flex-row space-y-10 mt-4 mb-24">
