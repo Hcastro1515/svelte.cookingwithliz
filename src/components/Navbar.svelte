@@ -54,7 +54,7 @@
 	</button>
 	<nav class="hidden md:flex items-center space-x-4">
 		<a href="/" class="hover:border-b-2 border-orange-300 transition ease-in">Home</a>
-		<a href="/">About</a>
+		<a href="#about">About</a>
 		<div class="flex space-x-2 justify-center items-center relative">
 			<a href="/" on:click={handleRecetasMenuOpen}>Recetas</a>
 			<div class="w-4 h-4 cursor-pointer">
@@ -86,7 +86,7 @@
 	>
 		<nav class="flex flex-col space-y-6 justify-center items-center">
 			<a href="/">Home</a>
-			<a href="/about">About</a>
+			<a href="#about">About</a>
 			<div class="flex space-x-2 justify-center items-center">
 				<a href="/" on:click={handleRecetasMenuOpen}>Recetas</a>
 				<div class="w-4 h-4 cursor-pointer">

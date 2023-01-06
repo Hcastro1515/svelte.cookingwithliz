@@ -9,6 +9,10 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Cooking With Liz</title>
+</svelte:head>
+
 <section class="flex justify-center items-center flex-col md:flex-row space-y-10 mt-4 mb-24">
 	<div class=" space-y-6 sm:max-w-md lg:max-w-xl md:mr-14">
 		<h1 class="text-2xl font-semibold text-black md:text-3xl lg:text-4xl xl:text-5xl xl:max-w-xl">
@@ -132,10 +136,17 @@
 			<h3 class=" mb-2 text-xl md:text-3xl font-extrabold">
 				Hola soy lizbeth, mucho Gusto en conocerlos
 			</h3>
-			<p class="text-xs sm:text-sm text-gray-700">
-				Soy una Dominicana emprendedora que empezó su carrera con una guardería en la ciudad de
-				Nueva York. Hoy en día estoy expandiendo mi horizonte y aprendiendo más sobre la cocina. Te
-				invito a que aprendas más de mí.
+			<p class="text-xs sm:text-sm md:text-lg mb-2 text-gray-700">Hola!!! Soy Lizbeth bienvenidos a cooking with Liz</p>
+			<p class="text-xs sm:text-sm text-gray-700 mb-2">
+				Siempre me a encantado la Cocina en especial la pastelería para mi es mi momento de paz el
+				cual disfruto mucho, este blog está creado para aquellos amantes a la cocina ya sean o no
+				profesionales. Cooking with Liz fue creado en el 2021 con la idea de compartir mi
+				conocimiento mientras estudiaba pastry arts profesionalmente y con el tiempo se a convertido
+				en mi pasa tiempo favorito.
+			</p>
+			<p class="text-xs text-gray-700">
+				Cualificaciones Profesionales - Diploma on profesional Pastry and Culinary Arts de
+				universidad culinary Auguste
 			</p>
 		</div>
 		<div class="flex space-x-2 md:w-6/12">
