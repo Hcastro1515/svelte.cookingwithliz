@@ -8,6 +8,12 @@
 
 </script>
 
+<svelte:head>
+	<title>Cooking With Liz | Recipe</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9306994878118987"
+	crossorigin="anonymous"></script>
+</svelte:head>
+
 <div class="grid p-4">
 	{#if data.recipe}
 		{#each data.recipe as r}

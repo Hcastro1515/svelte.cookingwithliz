@@ -15,6 +15,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Recipes | All Recipes</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9306994878118987"
+	crossorigin="anonymous"></script>
+</svelte:head>
+
 <div>
 	<select bind:value={selected} class="w-full p-3 rounded-md focus:border-purple-400 bg-gray-100">
 		<option value="" disabled>Select a category</option>
