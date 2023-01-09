@@ -54,9 +54,9 @@
 	</button>
 	<nav class="hidden md:flex items-center space-x-4">
 		<a href="/" class="hover:border-b-2 border-orange-300 transition ease-in">Home</a>
-		<a href="#about">About</a>
+		<a href="#about" class="hover:border-b-2 border-orange-300 transition ease-in">About</a>
 		<div class="flex space-x-2 justify-center items-center relative">
-			<a href="/" on:click={handleRecetasMenuOpen}>Recetas</a>
+			<a class="hover:border-b-2 border-orange-300 transition ease-in" href="/recipes" on:click={handleRecetasMenuOpen}>Recetas</a>
 			<div class="w-4 h-4 cursor-pointer">
 				<FaAngleRight />
 			</div>
