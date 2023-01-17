@@ -23,7 +23,7 @@
 
 <div>
 	<select bind:value={selected} class="w-full p-3 rounded-md focus:border-purple-400 bg-gray-100">
-		<option value="" disabled>Select a category</option>
+		<option value="">Select a category</option>
 		{#each categories as category}
 			<option value={category.name}>{category.name}</option>
 		{/each}

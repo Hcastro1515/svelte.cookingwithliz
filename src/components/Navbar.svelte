@@ -1,6 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { cubicIn, cubicOut, bounceIn, sineIn } from 'svelte/easing';
 	import TiThMenu from 'svelte-icons/ti/TiThMenu.svelte';
 	import FaAngleRight from 'svelte-icons/fa/FaAngleRight.svelte';
 	import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
@@ -81,7 +81,7 @@
 {#if isMenuOpen}
 	<div
 		class=" py-6 px-8 flex justify-center bg-orange-50 flex-col"
-		in:slide={{ duration: 200, easing: cubicIn }}
+		in:slide={{ duration: 200, easing: sineIn, }}
 		out:slide={{ duration: 200, easing: cubicOut }}
 	>
 		<nav class="flex flex-col space-y-6 justify-center items-center">
